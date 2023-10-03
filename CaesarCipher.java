@@ -1,5 +1,5 @@
 import java.util.*;
-public class CaesarCipher { 
+public class CaesarCipher {
 	
 	String encrypt(String plaintext,int offset)
 	{
