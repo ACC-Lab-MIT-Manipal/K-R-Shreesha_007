@@ -1,5 +1,5 @@
 import java.util.Scanner;
-  
+
 public class AffineCipher {
 	int a = 17, b = 20;
 	String encrypt(String plaintext)
