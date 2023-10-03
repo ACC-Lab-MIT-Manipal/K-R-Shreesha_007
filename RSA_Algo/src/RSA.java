@@ -1,4 +1,3 @@
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.*;
 public class RSA {
@@ -35,7 +34,7 @@ public class RSA {
 	        BigInteger N = BigInteger.valueOf(n);
 	        
 	        // converting float value of c to BigInteger
-	        BigInteger C = BigDecimal.valueOf(c).toBigInteger();
+	        BigInteger C = BigInteger.valueOf(c);
 	        BigInteger msgback = (C.pow(d)).mod(N);
 	        System.out.println("Decrypted message is : "
 	                           + msgback);
@@ -44,7 +43,7 @@ public class RSA {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RSA r = new RSA();
-		r.rsa(3, 11);
+		r.rsa(3, 7);
 	}
 
 }
