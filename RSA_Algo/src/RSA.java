@@ -18,14 +18,13 @@ public class RSA {
 					break;
 		}
 		 System.out.println("the value of e = " + e);
-	        for (int i = 0; i <= 9; i++) {
-	            int x = 1 + (i * totient);
-	 
-	            // d is for private key exponent
-	            if (x % e == 0) {
-	                d = x / e;
-	                break;
-	            }
+	        for(int i=0;i<totient;i++)
+	        {
+	        	if((e*i)%totient==1)
+	        	{
+	        		d = i;break;
+	        	}
+	        	d = -1; //no inverse exist
 	        }
 	        System.out.println("the value of d = " + d);
 	        System.out.println("Enter msg:");
