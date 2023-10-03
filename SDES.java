@@ -2,7 +2,7 @@
 import java.io.*;  
 import java.security.*;  
 import java.security.spec.AlgorithmParameterSpec;  
-import javax.crypto.*;    
+import javax.crypto.*;     
 import javax.crypto.spec.IvParameterSpec;   
 public class SDES   
 {  
