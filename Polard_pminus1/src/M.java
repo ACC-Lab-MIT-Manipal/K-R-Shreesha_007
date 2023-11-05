@@ -24,7 +24,7 @@ public class M {
 		while(d==1)
 		{
 			
-			d = gcd((int)Math.pow(a, fact(++k))-1,n);
+			d = gcd((int)(Math.pow(a, fact(++k))-1)%n,n);
 		}
 		if(d<n)
 			return d;
