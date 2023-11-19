@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.*;
 
 public class MainBaby {
@@ -28,7 +27,7 @@ public class MainBaby {
 	}
 	public static int baby_gaint_step(int base, int target, int p)
 	{
-		int m = (int)Math.floor(p);
+		int m = (int)Math.floor(Math.sqrt(p));
 		int g = powInv(base, p)%p;
 		// baby step part
 		HashMap<Integer, Integer> babystep = new HashMap<>();
@@ -41,8 +40,9 @@ public class MainBaby {
 		for(int i=0;i<m;i++)
 		{
 			int val = (target*fastExpo(g, m*i, p))%p;
-			if(babystep.containsKey(val))
+			if(babystep.containsKey(val)) {
 				return m*i + babystep.get(val);
+			}
 		}
 		return -1;
 	}
